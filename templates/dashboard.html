@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}My Dashboard{% endblock %}
+{% block content %}
+    <h1 style="color: white;"><b>Welcome</b> <br/>{{ first_name }} {{ last_name }}</h1>
+    <hr>
+<!-- "Create or Join Meeting" button -->
+<div class="create-meeting-button">
+    <div class="button-container">
+        <a class="btn btn-primary btn-lg m-2" href="{{ url_for('meeting') }}">
+            <i class="bi bi-camera-video"></i> Create Meeting
+        </a>
+        <a class="btn btn-success btn-lg m-2" href="{{ url_for('join') }}">
+            <i class="bi bi-person-plus"></i> Join Meeting
+        </a>
+        <a class="btn btn-outline-danger btn-lg m-2"  href="{{ url_for('logout') }}" style="color: white;" >
+            <i class="bi bi-box-arrow-right" style="color: white;"></i> Logout
+        </a>
+    </div>
+</div>
+
+
+{% endblock %}
